@@ -1,0 +1,23 @@
+{
+  "name": "task-manager-worker",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init": "wrangler d1 execute task-manager-db --file=./schema.sql",
+    "db:init:remote": "wrangler d1 execute task-manager-db --remote --file=./schema.sql"
+  },
+  "dependencies": {
+    "hono": "^4.6.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250101.0",
+    "typescript": "^5.5.0",
+    "wrangler": "^4.115.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "workerd@1.20260722.1": true
+  }
+}

@@ -1,0 +1,11 @@
+name = "task-manager-worker"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "task-manager-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+# `wrangler secret put GEMINI_API_KEY` で登録してください（Todayのクイック追加のNLP解析に使用）
+# ローカル開発では .dev.vars に GEMINI_API_KEY=xxxx を記載
